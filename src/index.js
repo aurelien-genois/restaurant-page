@@ -4,6 +4,9 @@ import { createMenuPage} from './modules/menu.js'
 import { createContactPage} from './modules/contact.js'
 import { createContact} from './modules/contact.js'
 
+// ! update the branch gh-pages if modifications
+// git subtree push --prefix dist origin gh-pages
+
 console.log(this, '1') // this undefined
 const tabsSelection = ((doc) => {
     const main = document.querySelector('#main');
@@ -46,8 +49,6 @@ const tabsSelection = ((doc) => {
                 clearChilds(main);
                 contactElements.map(el => main.appendChild(el));
                 break;
-        } 
-        // need to set the nav tabs state 'active'
-        // need to load the home by default
+        }
     }));
 })(document)
