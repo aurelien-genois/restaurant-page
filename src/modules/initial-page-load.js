@@ -30,7 +30,7 @@ const createFooter = ((doc) => {
     footer.setAttribute('id', 'footer');
     
     const footerTemp = doc.createElement('p');
-    footerTemp.textContent = 'I\' am the footer';
+    footerTemp.textContent = 'I am the footer';
 
     footer.appendChild(footerTemp);
 
