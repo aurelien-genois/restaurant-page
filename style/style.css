@@ -4,196 +4,231 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #content {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* header */
 #header {
-    padding-top: 1rem;
-    width: 100%;
-    background-color: bisque;
+  padding-top: 1rem;
+  width: 100%;
+  background-color: bisque;
 }
 #tabs {
-    display: flex;
+  display: flex;
 }
 .tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 128, 0, 0.527);
-    width: 33.3vw;
-    height: 3rem;
-    cursor: pointer;
-    font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 128, 0, 0.527);
+  width: 33.3vw;
+  height: 3rem;
+  cursor: pointer;
+  font-size: 2rem;
 }
 .tab:hover {
-    background: rgba(255, 255, 0, 0.527);
+  background: rgba(255, 255, 0, 0.527);
 }
 .current-tab {
-    background: rgba(255, 0, 0, 0.527);
-    font-weight: bold;
+  background: rgba(255, 0, 0, 0.527);
+  font-weight: bold;
 }
 
 /* Titles */
-#site-title, #site-slogan, #menu-title, #contact-title  {
-    font-family: 'DotGothic16', sans-serif;
-    text-align: center;}
-#site-title {
-    margin: 0 auto 1rem;
-    font-size: 5rem;
+#site-title,
+#site-slogan,
+#menu-title,
+#contact-title {
+  font-family: 'DotGothic16', sans-serif;
+  text-align: center;
 }
-#site-slogan, #menu-title, #contact-title  {
-    margin: 0 auto 0rem;
-    font-size: 3rem;
-    padding: 2.5rem;
+#site-title {
+  margin: 0 auto 1rem;
+  font-size: 5rem;
+}
+#site-slogan,
+#menu-title,
+#contact-title {
+  margin: 0 auto 0rem;
+  font-size: 3rem;
+  padding: 2.5rem;
 }
 #site-slogan {
-    padding: 2.5rem 0 0 0;
+  padding: 2.5rem 0 0 0;
 }
 
+.site-sections {
+  background-color: rgba(222, 184, 135, 0.301);
+  border-radius: 2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 100rem;
+  padding: 2.5rem;
+}
 /* Home */
-#site-presentation, #products-list, #contact-about, #contact-form, #contact-adress {
-    margin: 0 auto;
-    margin-top: 2rem;
-    max-width: 100rem;
-    border-radius: 2rem;
+/* todo change this ids repetition to site-section class */
+#site-presentation,
+#products-list,
+#contact-about,
+#contact-form,
+#contact-adress {
+  border-radius: 2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 100rem;
 }
-#site-presentation, #contact-about, #contact-form, #contact-adress {
-    display: flex;
-    align-items: center;
-    background-color: rgba(222, 184, 135, 0.301);
-    padding: 2.5rem;
+#site-presentation,
+#contact-about,
+#contact-form,
+#contact-adress {
+  display: flex;
+  align-items: center;
+  background-color: rgba(222, 184, 135, 0.301);
+  padding: 2.5rem;
 }
-#site-presentation-text, #contact-desc {
-    letter-spacing: 0.05rem;
-    word-spacing: 0.3rem;
-    font-size: 1.4rem;
+#site-presentation-text,
+#contact-desc {
+  letter-spacing: 0.05rem;
+  word-spacing: 0.3rem;
+  font-size: 1.4rem;
 }
 #site-presentation-img {
-    margin: 0 0 0 2.5rem;
-    width: 20rem;
-    height: 20rem;
-    object-fit: cover;
-    border-radius: 50%;
+  margin: 0 0 0 2.5rem;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#this-week-menu {
+  display: flex;
+}
+#this-week-menu .product-container {
+  width: 20%;
+  font-size: 0.9rem;
+}
+#this-week-menu .product-image {
+  height: 8rem;
 }
 
 /* Menu */
 #products-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgba(222, 184, 135, 0.301);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(222, 184, 135, 0.301);
 }
 .product-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-    padding: 0.6rem;
-    background-color: burlywood;
-    width: 30rem;
-    height: 20rem;
-    border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.6rem;
+  background-color: burlywood;
+  width: 50%;
+  height: auto;
+  border-radius: 1rem;
+  font-size: 1.2rem;
 }
 .product-image {
-    margin: 0.5rem auto;
-    width: 25rem;
-    height: 15rem;
-    object-fit: cover;
+  margin: 0.5rem auto;
+  width: 90%;
+  height: 15rem;
+  object-fit: cover;
 }
 .product-description {
-    text-align: center;
-    font-size: 1.2rem;
+  text-align: center;
 }
 
 /* Contact */
 #contact-img {
-    margin: 0 2.5rem 0 0;
-    width: 50rem;
-    height: 25rem;
-    object-fit: cover;
+  margin: 0 2.5rem 0 0;
+  width: 50rem;
+  height: 25rem;
+  object-fit: cover;
 }
 #contact-form {
-    display: grid;
-    grid-template-columns: 15rem 1fr;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
 }
 #contact-form label {
-    text-align: right;
-    margin: 0 0.5rem 0 0;
+  text-align: right;
+  margin: 0 0.5rem 0 0;
 }
 #contact-mail {
-    width: 20rem;
-    margin-bottom: 1rem;
+  width: 20rem;
+  margin-bottom: 1rem;
 }
 #contact-message {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 #contact-submit {
-    grid-column: 1/ span 2;
-    width: 20rem;
-    justify-self: center;
+  grid-column: 1 / span 2;
+  width: 20rem;
+  justify-self: center;
 }
 #contact-adress {
-    justify-content: stretch;
+  justify-content: stretch;
 }
 #contact-adress-coor {
-    width: 20rem;
-    margin-right: 2rem;
+  width: 20rem;
+  margin-right: 2rem;
 }
 #contact-adress-country {
-    font-size: 1.6rem;
-    font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 #contact-adress-city {
-    font-weight: bold;
+  font-weight: bold;
 }
 #contact-map {
-    height: 30rem;
-    width: 500rem;
-    justify-self: flex-end;
+  height: 30rem;
+  width: 500rem;
+  justify-self: flex-end;
 }
 
 /* Footer */
 #footer {
-    margin-top: 2rem;
-    background: black;
-    height: 3rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 2rem;
+  background: black;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #footer p {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 
-
 @media (max-width: 1050px) {
-    #site-presentation, #products-list, #contact-about, #contact-form, #contact-adress  {
-        margin: 2rem 1rem 0 1rem;
-    }
-    #site-presentation-img {
-        width: 19vw;
-        height: 19vw;
-        }
-    #contact-img {
-        width: 47.6vw;
-        height: 23.8vw;    
-    }
-    #contact-form {
-        grid-template-columns: 14.3vw 1fr;
-    }
-    #contact-map {
-        width: 60vw;
-    }
-    
+  #site-presentation,
+  #products-list,
+  #contact-about,
+  #contact-form,
+  #contact-adress {
+    margin: 2rem 1rem 0 1rem;
+  }
+  #site-presentation-img {
+    width: 19vw;
+    height: 19vw;
+  }
+  #contact-img {
+    width: 47.6vw;
+    height: 23.8vw;
+  }
+  #contact-form {
+    grid-template-columns: 14.3vw 1fr;
+  }
+  #contact-map {
+    width: 60vw;
+  }
 }
