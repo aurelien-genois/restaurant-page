@@ -22,6 +22,7 @@ const createHomePage = ((doc) => {
       'https://pbs.twimg.com/media/DY6Y6ZlX0AAgaa0.jpg',
     );
     homePresentationImg.id = 'site-presentation-img';
+    homePresentationImg.alt = 'Roboto photograhpy';
     homePresentation.append(homePresentationText, homePresentationImg);
 
     return homePresentation;

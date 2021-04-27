@@ -21,6 +21,7 @@ const createProductContainer = (menuProduct) => {
   productTitle.textContent = menuProduct.getTitle();
 
   const productImg = createDomElements.createImg(menuProduct.getImgUrl());
+  productImg.alt = 'Sushi photography';
   productImg.classList.add('product-image');
 
   const productDesc = createDomElements.createParagraph(menuProduct.getDesc());
