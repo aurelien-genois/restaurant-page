@@ -3,21 +3,30 @@ import { createProductContainer } from './product-class.js';
 const createMenuPage = ((doc) => {
   // one product template
 
-  const createProductList = (productsArr) => {
-    const productsList = doc.createElement('div');
-    productsList.setAttribute('id', 'products-list');
-    productsList.classList.add('site-sections', 'menu-sections');
+  const createProductsList = (productsArr, category) => {
+    const productsListSection = doc.createElement('div');
+    productsListSection.classList.add(
+      'products-list-sections',
+      `${category.toLowerCase()}-products-section`,
+    );
+    productsListSection.classList.add('site-sections', 'menu-sections');
 
-    console.log(productsArr);
+    const listTitle = doc.createElement('h2');
+    listTitle.classList.add('titles', 'section-titles');
+    listTitle.textContent = `${category}'s sushis`;
+
+    const productsList = doc.createElement('div');
+    productsList.classList.add('products-list');
 
     productsArr.map((product) => {
       productsList.appendChild(createProductContainer(product));
     });
+    productsListSection.append(listTitle, productsList);
 
-    return productsList;
+    return productsListSection;
   };
 
-  return { createProductList };
+  return { createProductsList };
 })(document);
 
 export { createMenuPage };

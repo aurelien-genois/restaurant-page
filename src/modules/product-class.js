@@ -1,20 +1,25 @@
 import { createDomElements } from './domElement.js';
 
-const product = (title, imgUrl, desc) => {
+const product = (title, imgUrl, desc, category) => {
   const getTitle = () => title;
   const getImgUrl = () => imgUrl;
   const getDesc = () => desc;
+  const getCategory = () => category;
 
   return {
     getTitle,
     getImgUrl,
     getDesc,
+    getCategory,
   };
 };
 
 const createProductContainer = (menuProduct) => {
   const productContainer = document.createElement('div');
-  productContainer.classList.add('product-container');
+  productContainer.classList.add(
+    'product-container',
+    `${menuProduct.getCategory()}-products`,
+  );
 
   const productTitle = document.createElement('h3');
   productTitle.classList.add('product-title');
