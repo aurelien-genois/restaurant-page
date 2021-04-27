@@ -6,7 +6,7 @@ const createHomePage = ((doc) => {
     const homeSlogan = doc.createElement('h2');
     homeSlogan.id = 'site-slogan';
     homeSlogan.classList.add('titles');
-    homeSlogan.textContent = 'Quantum suchi for faster delivery';
+    homeSlogan.textContent = 'Quantum sushi for faster delivery';
     return homeSlogan;
   };
 
@@ -33,7 +33,7 @@ const createHomePage = ((doc) => {
     const thisWeekTitle = doc.createElement('h3');
     thisWeekTitle.id = 'this-week-title';
     thisWeekTitle.textContent = 'This week menu';
-    thisWeekTitle.classList.add('titles');
+    thisWeekTitle.classList.add('titles', 'section-titles');
     const thisWeekMenu = doc.createElement('div');
     thisWeekMenu.id = 'this-week-menu';
     products.map((product) => {

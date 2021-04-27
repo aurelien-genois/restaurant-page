@@ -6,6 +6,7 @@ const createHeader = ((doc) => {
   // site title
   const h1 = doc.createElement('h1');
   h1.textContent = 'Roboto sushi';
+  h1.classList.add('titles');
   h1.setAttribute('id', 'site-title');
   // tabs
   const tabsDiv = doc.createElement('nav');
@@ -37,13 +38,11 @@ const createFooter = ((doc) => {
 })(document);
 
 const initPageStructure = ((doc) => {
-  const siteContent = document.querySelector('#content');
+  const siteContent = doc.querySelector('#content');
   const siteMain = doc.createElement('main');
-  siteMain.setAttribute('id', 'main');
+  siteMain.id = 'main';
 
-  siteContent.appendChild(createHeader.header);
-  siteContent.appendChild(siteMain);
-  siteContent.appendChild(createFooter.footer);
+  siteContent.append(createHeader.header, siteMain, createFooter.footer);
 })(document);
 
 export { initPageStructure };

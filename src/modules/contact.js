@@ -4,6 +4,7 @@ const createContact = ((doc) => {
   const createAbout = () => {
     const aboutDiv = doc.createElement('div');
     aboutDiv.setAttribute('id', 'contact-about');
+    aboutDiv.classList.add('site-sections', 'contact-sections');
 
     const contactImg = createDomElements.createImg(
       'https://images.unsplash.com/photo-1552531268-3fe8c3fc8d84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
@@ -24,6 +25,7 @@ const createContact = ((doc) => {
   const createForm = () => {
     const contactForm = doc.createElement('form');
     contactForm.setAttribute('id', 'contact-form');
+    contactForm.classList.add('site-sections', 'contact-sections');
 
     const contactMailLabel = createDomElements.createLabel(
       'Your email adress:',
@@ -57,6 +59,7 @@ const createContact = ((doc) => {
   const createAdress = () => {
     const adressDiv = doc.createElement('div');
     adressDiv.setAttribute('id', 'contact-adress');
+    adressDiv.classList.add('site-sections', 'contact-sections');
 
     const adressCoor = doc.createElement('div');
     adressCoor.setAttribute('id', 'contact-adress-coor');

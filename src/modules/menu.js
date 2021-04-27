@@ -6,6 +6,7 @@ const createMenuPage = ((doc) => {
   const createProductList = (productsArr) => {
     const productsList = doc.createElement('div');
     productsList.setAttribute('id', 'products-list');
+    productsList.classList.add('site-sections', 'menu-sections');
 
     console.log(productsArr);
 
