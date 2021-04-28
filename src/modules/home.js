@@ -6,7 +6,8 @@ const createHomePage = ((doc) => {
     const homeSlogan = doc.createElement('h2');
     homeSlogan.id = 'site-slogan';
     homeSlogan.classList.add('titles');
-    homeSlogan.textContent = 'Quantum sushi for faster delivery';
+    homeSlogan.textContent =
+      'Tasty and colorful sushis in the heart of Taipei! ';
     return homeSlogan;
   };
 
@@ -15,7 +16,7 @@ const createHomePage = ((doc) => {
     homePresentation.id = 'site-presentation';
     homePresentation.classList.add('site-sections', 'home-sections');
     const homePresentationText = createDomElements.createParagraph(
-      'Hello, we make the best sushi in the universe here! Prepared with quantum technology, our sushi can be savored again and again, even after eaten! Our sushi will be back from past in a second, still as delicious as before!',
+      '\tHello, we make the best sushi in the universe here!\n\n\tPrepared with vegetables from our garden and cooked with a future technology, our sushi can be savored again and again, even after being eaten! Our sushi will be back from the past in a second, still as delicious as before!',
     );
     homePresentationText.id = 'site-presentation-text';
     const homePresentationImg = createDomElements.createImg(

@@ -20,7 +20,7 @@ const createContact = ((doc) => {
     contactImg.id = 'contact-img';
     contactImg.alt = 'restaurant photography';
     const contactDesc = createDomElements.createParagraph(
-      'Our sushi is located is Xinyi, the greatest district of Tapei. Odio voluptatibus nihil expedita aut iure incidunt vitae impedit saepe facere. Eveniet consequuntur laudantium labore expedita.',
+      '\tOur sushi restaurant is located is Xinyi, the most dynamic district of Tapei.\n\n\tWe open every day, every hour, save for the international robot day, which date is kept secret from humans.\n\n\tOur sushimen robots never sleep and are very hygienic for the food. Come see them at work anytime!',
     );
     contactDesc.id = 'contact-desc';
     presentationDiv.append(contactImg, contactDesc);
