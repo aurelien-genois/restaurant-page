@@ -3,92 +3,107 @@ import { createDomElements } from './domElement.js';
 const createContact = ((doc) => {
   const createAbout = () => {
     const aboutDiv = doc.createElement('div');
-    aboutDiv.setAttribute('id', 'contact-about');
+    aboutDiv.id = 'contact-about-section';
     aboutDiv.classList.add('site-sections', 'contact-sections');
 
+    const aboutTitle = doc.createElement('h2');
+    aboutTitle.classList.add('titles', 'section-titles');
+    aboutTitle.id = 'contact-about-title';
+    aboutTitle.textContent = 'Our restaurant';
+
+    // presentation
+    const presentationDiv = doc.createElement('div');
+    presentationDiv.id = 'contact-presentation';
     const contactImg = createDomElements.createImg(
       'https://images.unsplash.com/photo-1552531268-3fe8c3fc8d84?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
     );
-    contactImg.setAttribute('id', 'contact-img');
-
+    contactImg.id = 'contact-img';
+    contactImg.alt = 'restaurant photography';
     const contactDesc = createDomElements.createParagraph(
-      'Our sushi is located is on Ganymede, the greatest moon of Jupiter. Odio voluptatibus nihil expedita aut iure incidunt vitae impedit saepe facere. Eveniet consequuntur laudantium labore expedita.',
+      'Our sushi is located is Xinyi, the greatest district of Tapei. Odio voluptatibus nihil expedita aut iure incidunt vitae impedit saepe facere. Eveniet consequuntur laudantium labore expedita.',
     );
-    contactDesc.setAttribute('id', 'contact-desc');
+    contactDesc.id = 'contact-desc';
+    presentationDiv.append(contactImg, contactDesc);
 
-    aboutDiv.appendChild(contactImg);
-    aboutDiv.appendChild(contactDesc);
+    // adress
+    const adressDiv = doc.createElement('div');
+    adressDiv.id = 'contact-adress';
+    const adressCoor = doc.createElement('div');
+    adressCoor.id = 'contact-adress-coor';
+    const country = createDomElements.createParagraph('Taïwan');
+    country.id = 'contact-adress-country';
+    country.classList.add('contact-adress-text');
+    const city = createDomElements.createParagraph(
+      `Taipei City, Xinyi District`,
+    );
+    city.id = 'contact-adress-city';
+    city.classList.add('contact-adress-text');
+    const road = createDomElements.createParagraph(
+      'Lane 39, Section 2,\nJilong Road,\nNo. 35, 1st Floor',
+    );
+    road.id = 'contact-adress-road';
+    road.classList.add('contact-adress-text');
+    adressCoor.appendChild(country);
+    adressCoor.appendChild(city);
+    adressCoor.appendChild(road);
+    const mapEmbed = doc.createElement('iframe');
+    mapEmbed.id = 'contact-map';
+    mapEmbed.loading = 'lazy';
+    mapEmbed.src =
+      'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1092.0601739132837!2d121.55941121800703!3d25.03082450777196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abca7f688cf7%3A0xb2221faaa8175ac4!2zTGEgRmFtaWxsZeaLieazleexs-WLkumkkOmbhg!5e1!3m2!1sfr!2sfr!4v1619598816818!5m2!1sfr!2sfr';
+    adressDiv.append(adressCoor, mapEmbed);
+
+    aboutDiv.append(aboutTitle, presentationDiv, adressDiv);
 
     return aboutDiv;
   };
-
   const createForm = () => {
+    const contactSection = doc.createElement('div');
+    contactSection.id = 'contact-form-section';
+    contactSection.classList.add('site-sections', 'contact-sections');
+
+    const contactTitle = doc.createElement('h2');
+    contactTitle.classList.add('titles', 'section-titles');
+    contactTitle.id = 'contact-form-title';
+    contactTitle.textContent = 'Contact us!';
+
     const contactForm = doc.createElement('form');
-    contactForm.setAttribute('id', 'contact-form');
-    contactForm.classList.add('site-sections', 'contact-sections');
+    contactForm.id = 'contact-form';
 
     const contactMailLabel = createDomElements.createLabel(
       'Your email adress:',
       'contact-mail',
     );
-    contactMailLabel.setAttribute('id', 'contact-mail-label');
+    contactMailLabel.id = 'contact-mail-label';
     const contactMailInput = createDomElements.createInput('email');
-    contactMailInput.setAttribute('id', 'contact-mail');
+    contactMailInput.id = 'contact-mail';
 
     const contactMessageLabel = createDomElements.createLabel(
       'Your message:',
       'contact-message',
     );
-    contactMessageLabel.setAttribute('id', 'contact-message-label');
+    contactMessageLabel.id = 'contact-message-label';
     const contactMessage = createDomElements.createInput('textarea');
-    contactMessage.setAttribute('id', 'contact-message');
+    contactMessage.id = 'contact-message';
 
     const contactSubmit = createDomElements.createInput('submit');
-    contactSubmit.setAttribute('id', 'contact-submit');
+    contactSubmit.id = 'contact-submit';
     contactSubmit.value = 'Send message';
 
-    contactForm.appendChild(contactMailLabel);
-    contactForm.appendChild(contactMailInput);
-    contactForm.appendChild(contactMessageLabel);
-    contactForm.appendChild(contactMessage);
-    contactForm.appendChild(contactSubmit);
+    contactForm.append(
+      contactMailLabel,
+      contactMailInput,
+      contactMessageLabel,
+      contactMessage,
+      contactSubmit,
+    );
 
-    return contactForm;
+    contactSection.append(contactTitle, contactForm);
+
+    return contactSection;
   };
 
-  const createAdress = () => {
-    const adressDiv = doc.createElement('div');
-    adressDiv.setAttribute('id', 'contact-adress');
-    adressDiv.classList.add('site-sections', 'contact-sections');
-
-    const adressCoor = doc.createElement('div');
-    adressCoor.setAttribute('id', 'contact-adress-coor');
-    const country = createDomElements.createParagraph('Country');
-    country.setAttribute('id', 'contact-adress-country');
-    country.classList.add('contact-adress-text');
-    const city = createDomElements.createParagraph('City');
-    city.setAttribute('id', 'contact-adress-city');
-    city.classList.add('contact-adress-text');
-    const road = createDomElements.createParagraph('333 Road');
-    road.setAttribute('id', 'contact-adress-road');
-    road.classList.add('contact-adress-text');
-    adressCoor.appendChild(country);
-    adressCoor.appendChild(city);
-    adressCoor.appendChild(road);
-
-    const mapEmbed = doc.createElement('iframe');
-    mapEmbed.setAttribute('id', 'contact-map');
-    mapEmbed.src =
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.477835903187!2d3.8091240801344073!3d43.617412662864034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6ac317b47b909%3A0x9d8496c1217f9864!2sRue%20Ganym%C3%A8de%2C%2034990%20Juvignac!5e0!3m2!1sfr!2sfr!4v1615203259650!5m2!1sfr!2sfr';
-    mapEmbed.setAttribute('loading', 'lazy');
-
-    adressDiv.appendChild(adressCoor);
-    adressDiv.appendChild(mapEmbed);
-
-    return adressDiv;
-  };
-
-  return [createAbout(), createForm(), createAdress()];
+  return [createAbout(), createForm()];
 })(document);
 
 export { createContact };
