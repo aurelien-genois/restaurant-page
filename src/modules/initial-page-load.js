@@ -29,10 +29,19 @@ const createFooter = ((doc) => {
   const footer = doc.createElement('footer');
   footer.setAttribute('id', 'footer');
 
-  const footerTemp = doc.createElement('p');
-  footerTemp.textContent = 'I am the footer';
+  const gitProjectLink = doc.createElement('a');
+  gitProjectLink.href = 'https://github.com/aurelien-genois/restaurant-page';
+  gitProjectLink.textContent = 'Seventh Odin project';
+  gitProjectLink.target = '_blank';
+  const gitprofileLink = doc.createElement('a');
+  gitprofileLink.href = 'https://github.com/aurelien-genois';
+  gitprofileLink.textContent = 'Aurélien Genois';
+  gitprofileLink.target = '_blank';
 
-  footer.appendChild(footerTemp);
+  const footerText = doc.createElement('p');
+  footerText.append(gitProjectLink, ' created by ', gitprofileLink);
+
+  footer.append(footerText);
 
   return { footer };
 })(document);
