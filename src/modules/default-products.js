@@ -110,28 +110,22 @@ const listOfSeasonProducts = [
 
 const listOfThisWeekProducts = [
   product(
-    'One Sushi',
-    'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80',
-    'This Sushi will enjoy your daily and repetitive meals.',
-    'this-week',
-  ),
-  product(
-    'this-week Sushi',
+    'Diet Sushi',
     'https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80',
     'Sushis for busy and worried people.',
-    'this-week',
+    'diet',
   ),
   product(
-    'One Sushi',
+    'Spicy Sushi',
     'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80',
     'This Sushi will enjoy your daily and repetitive meals.',
-    'this-week',
+    'spicy',
   ),
   product(
-    'this-week Sushi',
+    'Veggie Sushi',
     'https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80',
     'Sushis for busy and worried people.',
-    'this-week',
+    'veggie',
   ),
 ];
 
