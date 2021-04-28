@@ -6,14 +6,14 @@ html {
   --white-blue: rgb(193, 246, 255);
   --dark-violet: rgb(120, 69, 202);
   --light-violet: rgb(181, 70, 255);
-  --blue-section: rgba(76, 106, 206, 0.9);
-  --violet-section: rgba(181, 70, 255, 0.9);
   --white-violet: rgb(226, 183, 255);
+  --blue-section: rgba(76, 106, 206, 0.8);
+  --violet-section: rgba(181, 70, 255, 0.8);
   --yellow-highlight: rgb(255, 230, 0);
-  --green-veggie: rgba(56, 185, 51, 0.9);
-  --red-spicy: rgba(255, 22, 41, 0.9);
-  --yellowgreen-diet: rgba(196, 199, 4, 0.91);
-  --orange-season: rgba(255, 94, 0, 0.9);
+  --green-veggie: rgba(56, 185, 51, 0.8);
+  --red-spicy: rgba(255, 22, 41, 0.8);
+  --yellowgreen-diet: rgba(196, 199, 4, 0.8);
+  --orange-season: rgba(255, 94, 0, 0.8);
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
