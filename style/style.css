@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   --dark-blue: rgb(51, 88, 167);
+  --black-blue: rgb(0, 3, 17);
   --light-blue: rgb(53, 174, 196);
   --white-blue: rgb(193, 246, 255);
   --dark-violet: rgb(120, 69, 202);
@@ -62,21 +63,6 @@ p {
   width: 80vw;
   margin: 0 auto 2rem auto;
 }
-/* Footer */
-#footer {
-  margin-top: 2rem;
-  background: black;
-  height: 3rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: end;
-}
-#footer p {
-  text-align: center;
-  color: white;
-}
 
 /* header */
 #tabs {
@@ -116,6 +102,34 @@ p {
   background: var(--light-blue);
   box-shadow: 0 0 2rem var(--light-blue);
   text-shadow: 0 0 2rem var(--white-blue);
+}
+
+/* Footer */
+#footer {
+  margin-top: 3rem;
+  background: var(--black-blue);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  border-top: solid 0.3rem var(--white-blue);
+  box-shadow: 0 0 2rem var(--white-blue);
+}
+#footer p {
+  text-align: center;
+  color: var(--white-violet);
+  margin: 1rem auto;
+}
+#footer a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+#footer a:visited {
+  color: var(--light-violet);
+}
+#footer a:hover {
+  color: var(--white-blue);
 }
 
 /* Titles */
