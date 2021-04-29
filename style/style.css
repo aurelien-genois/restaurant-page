@@ -21,9 +21,13 @@ html {
   margin: 0;
   padding: 0;
 }
+/* prevent the default focus outline on chrome */
+:focus {
+  outline: transparent none 0px;
+}
 #content {
   font-family: 'Orbitron', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.05rem;
   word-spacing: 0.3rem;
   font-size: 1.5rem;
@@ -102,7 +106,7 @@ html {
 .current-tab:hover {
   background: var(--light-blue);
   box-shadow: 0 0 2rem var(--light-blue);
-  text-shadow: 0 0 2rem var(--white-blue);
+  text-shadow: 0 0 1rem var(--white-blue);
 }
 
 /* Footer */
@@ -143,8 +147,8 @@ html {
   margin: 0 auto 2rem;
 }
 #site-title {
-  -webkit-text-stroke: 0.2rem var(--white-blue);
-  color: transparent;
+  -webkit-text-stroke: 0.1rem var(--white-blue);
+  -webkit-text-fill-color: transparent;
   font-size: 5rem;
 }
 .section-titles {
@@ -361,7 +365,6 @@ html {
 #contact-submit:hover {
   box-shadow: 0 0 2rem var(--light-blue);
   text-shadow: 0 0 1rem var(--white-blue);
-  font-weight: 900;
 }
 
 /* responsive */
