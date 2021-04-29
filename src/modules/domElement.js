@@ -13,10 +13,13 @@ const createDomElements = ((doc) => {
     let input;
     if (type === 'textarea') {
       input = doc.createElement('textarea');
+      input.maxLength = '400';
     } else {
       input = doc.createElement('input');
+      input.maxLength = '80';
       input.type = type;
     }
+    input.required = true;
     return input;
   };
   const createLabel = (textContent, forAttr) => {
